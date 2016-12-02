@@ -1,0 +1,31 @@
+body{
+  width:100%;
+  margin:0;
+  text-align: center;
+}
+.container {
+  width: 250px;
+  height: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+.box {
+  width: 80px;
+  height: 80px;
+  display:inline-block;
+  vertical-align: top;
+}
+.longbox {
+  width : 170px;
+
+}
+
+#affichage{
+  margin-top: 10px;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  background-color: lightGrey;
+  padding: 20px 0;
+}
