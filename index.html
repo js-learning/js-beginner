@@ -1,0 +1,1485 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Initiation au JavaScript</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>	<body>
+    <div class="theme-font-montserrat theme-color-silver-blue" style="width: 100%; height: 100%;">
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 277px; height: auto;">
+                        <div class="sl-block-content" style="" dir="ui">
+                            <h1>JavaScript</h1>
+                        </div>
+                    </div>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;" dir="ui">
+                                <h2>Son histoire</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 175px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>créé en 1995</li>
+                                    <li>par Brendan Eich, ingénieur chez Netscape</li>
+                                    <li>appelé en premier lieu LiveScript</li>
+                                    <li>pour être renommé JavaScript pour profiter de la notoriété du Java</li>
+                                    <li>introduit dans Internet Explorer 3 sous le nom JScript</li>
+                                    <li>soumis à la commission de normalisation européenne afin de rendre le langage universel</li>
+                                    <li>aujourd'hui appelé ECMAScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les ressources utiles</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 136px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                                <ul>
+                                    <li>
+                                        <a href="https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript" target="_blank">https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/mbeaudru/modern-js-cheatsheet" target="_blank">https://github.com/mbeaudru/modern-js-cheatsheet</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sitepen.com/blog/2017/11/10/web-frameworks-conclusions/" target="_blank">https://www.sitepen.com/blog/2017/11/10/web-frameworks-conclusions/</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/elsewhencode/project-guidelines#readme" target="_blank">https://github.com/elsewhencode/project-guidelines#readme</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec" target="_blank">https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/denysdovhan/wtfjs#readme" target="_blank">https://github.com/denysdovhan/wtfjs#readme</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1>LA CONSOLE</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>KéSaKo ?</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>
+                                        <span style="color:rgb(68, 68, 68); text-align:start">entrer des instructions à la volée</span>
+                                    </li>
+                                    <li>
+                                        <span style="color:rgb(68, 68, 68); text-align:start">consulter les données en mémoire</span>
+                                    </li>
+                                    <li>
+                                        <span style="color:rgb(68, 68, 68); text-align:start">explorer les fonctions et variables disponibles</span>
+                                    </li>
+                                    <li>
+                                        <span style="color:rgb(68, 68, 68); text-align:start">cibler des éléments de la page</span>
+                                    </li>
+                                    <li>
+                                        <span style="color:rgb(68, 68, 68); text-align:start">effectuer des manipulations dynamiquement</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Ouvrir la console</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 210px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li>Windows :&nbsp;
+
+                                        <ul>
+                                            <li>IE, Mozilla Firefox, Chrome :
+                                                <strong>F12</strong>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Mac :
+
+                                        <ul>
+                                            <li>Chrome, Mozilla Firefox, Safari :
+                                                <strong>Cmd+Alt+I</strong>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 806px; height: 246px; left: 80px; top: 454px;">
+                            <div class="sl-block-content" style="z-index: 13;">
+                                <img style="" data-natural-width="904" data-natural-height="276" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/315256/images/4809192/pasted-from-clipboard.png"/>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Un petit test</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 81px; top: 218px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li>On ouvre le navigateur&nbsp; &nbsp;&nbsp;</li>
+                                    <li>On ouvre la console</li>
+                                    <li>On note :</li>
+                                </ul>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <ul>
+                                    <li>Notre page a été modifié</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 275px; height: 36px; left: 343px; top: 358px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="javascript">
+                                <code>document.write('Bonjour');</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1>Insérer du JavaScript dans une page HTML</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Comme le CSS ...</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 828px; left: 66px; top: 140px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li>Directement dans le fichier HTML</li>
+                                    <li>Dans un fichier JS séparé
+
+                                        <ul>
+                                            <li>l'inclusion dans le fichier HTML n'a pas d'importance</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 300px; left: 155px; top: 340px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="xml">
+                                <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+	&lt;title&gt;Mon premier document&lt;/title&gt;
+	&lt;script&gt;
+		document.write('Bonjour');
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;script src="index.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Faisons un essai</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 828px; left: 66px; top: 107px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>Créer un fichier HTML : index.html</li>
+                                    <li>Créer un fichier JavaScript : index.js</li>
+                                    <li>Inclure le fichier JS dans le fichier HTML en bas de page</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 480px; height: 314px; left: 0px; top: 260px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="xml">
+                                <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+	&lt;title&gt;Mon premier document&lt;/title&gt;
+	&lt;script&gt;
+		document.write('Bonjour');
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;script
+            src="index.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 419px; height: 314px; left: 511px; top: 260px;">
+                            <div class="sl-block-content notranslate" style="z-index: 14;">
+                            <pre class="javascript">
+                                <code>// fichier index.js
+document.write('Bonjour');</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 828px; left: 66px; top: 611px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 15;">
+                                <ul>
+                                    <li>Notre page affiche "Bonjour" 2 fois</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1>Les fondamentaux du langage 1/3</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Le commentaire</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 140px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li>annotations de l'auteur expliquant le fonctionnement</li>
+                                    <li>deux types de commentaires :
+
+                                        <ul>
+                                            <li>commentaires sur une seule ligne, précédés d'un double-slash</li>
+                                            <li>commentaires qui s'étendent sur plusieurs lignes entouré par
+                                                <strong>/* */</strong>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 154px; left: 230px; top: 413px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="javascript">
+                                <code>// Commentaire sur une seule ligne
+
+/*
+ Commentaire sur plusieurs lignes
+ afin d'expliquer un problème de façon
+ plus précise et moins concise
+*/</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 624px; left: 0px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les variables</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 624px; left: 0px; top: 107px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                                <ul>
+                                    <li>association d'un nom (identifiant)
+                                        <br/>
+                                        à une valeur stocké en mémoire du système d'exploitation
+                                    </li>
+                                    <li>cette valeur possède un type</li>
+                                    <li>chaque variable est unique</li>
+                                    <li>la variable peut changer de valeur</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 624px; left: 0px; top: 362px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <h2>La constante</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 624px; left: 0px; top: 451px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 13;" dir="ui">
+                                <ul>
+                                    <li>variable dont la valeur est fixe</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 154px; left: 0px; top: 534px;">
+                            <div class="sl-block-content notranslate" style="z-index: 14;">
+                            <pre class="javascript">
+                                <code>
+
+let myVar = 5;    // Je déclare ma variable myVar en lui assignant la valeur 5
+myVar = 6;        // Je modifie la valeur de ma variable en lui assignant la nouvelle valeur 6
+
+const myConst = 10; // Je déclare ma constante myConst en lui assignant la valeur 10</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 278px; height: 428px; left: 661px; top: 62px;">
+                            <div class="sl-block-content" style="z-index: 16;">
+                                <img style="" data-natural-width="345" data-natural-height="532" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/315256/images/4817046/7210.png"/>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les types primitif</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 140px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>
+                                        <span style="font-size:1.0em">Cinq types de données primitifs</span>
+                                        <ul>
+                                            <li>
+                                                <span style="font-size:1.0em">Boolean : Booléean (true / false)</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Null : Valeur inexistante</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Undefined : affectée automatiquement aux variables déclarés sans type</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Number : Nombre</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">String : Chaîne de caractères</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 880px; height: 154px; left: 40px; top: 490px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="javascript">
+                                <code>
+const myBoolean = true;     // Je suis un booléen
+const myNullVar = null;     // Je ne correspond à aucune valeur
+const myUndefinedVar;       // Je suis initialisé avec la valeur "undefined"
+const myNumber = 42;        // Je suis un nombre
+const myString = 'Hello';   // Je suis une chaîne de caractères</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les opérateurs de calcul</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 139px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>
+                                        <span style="font-size:1.0em">5 opérateurs différents : </span>
+                                        <ul>
+                                            <li>
+                                                <span style="font-size:1.0em">Addition : +</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Soustraction : -</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Multiplication : x</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Division : /</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:1.0em">Modulo : %</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 154px; left: 40px; top: 452px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>
+4 + 4; // 8 apparaît dans la console
+8 - 4; // 4 apparaît dans la console
+6 x 2; // 12 apparaît dans la console
+2 / 2; // 1 apparaît dans la console
+4 % 2; // 0 apparaît dans la console</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 913px; left: 24px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les opérateurs de comparaison</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 139px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>
+                                        <span style="font-size:1.0em">8 opérateurs différents : </span>
+                                        <ul>
+                                            <li>
+                                            <span style="color:rgb(17, 17, 17); text-align:left">
+                                                <strong>==</strong> :
+                                            </span>
+                                                <span style="font-size:1.0em">égal à </span>
+                                            </li>
+                                            <li>
+                                            <span style="color:rgb(17, 17, 17); text-align:left">
+                                                <strong>!=</strong>&nbsp;:
+                                            </span>
+                                                <span style="font-size:1.0em">différent de</span>
+                                            </li>
+                                            <li>
+                                            <span style="font-size:1.0em">
+                                                <strong>===</strong>&nbsp;: contenu et type égal à
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <strong>
+                                                    <span style="color:rgba(0, 0, 0, 0.85); text-align:start">!==</span>
+                                                </strong>
+                                                <span style="color:rgb(17, 17, 17); text-align:left">&nbsp;: contenu et type différent de</span>
+                                            </li>
+                                            <li>
+                                            <span style="color:rgb(17, 17, 17); text-align:left">
+                                                <strong>&gt;</strong> :
+                                            </span>
+                                                <span style="color:rgba(0, 0, 0, 0.85); text-align:start">supérieur à</span>
+                                            </li>
+                                            <li>
+                                                <strong>
+                                                    <span style="color:rgb(17, 17, 17); text-align:left">&gt;= </span>
+                                                </strong>
+                                                <span style="color:rgb(17, 17, 17); text-align:left">: </span>
+                                                <span style="color:rgba(0, 0, 0, 0.85); text-align:start">supérieur ou égal à</span>
+                                            </li>
+                                            <li>
+                                                <strong>
+                                                    <span style="color:rgb(17, 17, 17); text-align:left">&lt; </span>
+                                                </strong>
+                                                <span style="color:rgb(17, 17, 17); text-align:left">: </span>
+                                                <span style="color:rgba(0, 0, 0, 0.85); text-align:start">inférieur à</span>
+                                            </li>
+                                            <li>
+                                                <strong>&lt;= </strong>:
+                                                <span style="color:rgba(0, 0, 0, 0.85); text-align:start">inférieur ou égal à</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 92px; left: 41px; top: 560px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>
+4 == "4"; // "true" apparait dans la console
+4 === "4"; // "false" apparait dans la console</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 913px; left: 25px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>La concaténation</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 210px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>Permet de combiner deux chaines de caractères grâce à l'opérateur "+"</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 119px; left: 40px; top: 317px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>
+const firstString = 'Je suis';
+const secondString = 'un viking';
+
+console.log(firstString + secondString); // La console affiche 'Je suisun viking'</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 451px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 14;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Comment faire apparaître la phrase "Je suis un viking" sans modifier les constantes ?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 911px; height: 119px; left: 25px; top: 545px;">
+                            <div class="sl-block-content fragment notranslate" style="z-index: 15;" data-fragment-index="1">
+                            <pre class="javascript">
+                                <code>
+console.log(firstString + ' ' + secondString); // La console affiche 'Je suis un viking'</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 913px; left: 25px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Modèle de libellé</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 210px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>Template literals en anglais</li>
+                                    <li>Permet d'insérer des variables dans une chaine de caractères</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 880px; height: 119px; left: 43px; top: 350px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>
+const firstname = 'Hector';
+console.log(`Je me nomme ${firstname} !`); // La console affiche "Je me nomme Hector !"</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1>Les fondamentaux de JavaScript 2/3</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>La structure conditionnel "if/else"</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 502px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>exécute une instruction si une condition donnée est vraie</li>
+                                    <li>si la condition est fausse, l'autre instruction est utilisé</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 610px; height: 300px; left: 175px; top: 190px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="javascript">
+                                <code>// fichier index.js
+const myConst = 25;
+
+if (myConst === 12) {
+    document.write('Ma constante est égale à 12');
+} else {
+    document.write('Ma constante est différente de 12');
+}</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>La structure conditionnel "switch"</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 420px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>exécute une instruction si la valeur correspond à une condition</li>
+                                    <li>si la condition est fausse, l'instruction correspondant à "default" est utilisé</li>
+                                    <li>le mot break est obligatoire pour limiter l'instruction à au cas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 610px; height: 230px; left: 175px; top: 165px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>// fichier index.js
+switch (myNumber) {
+  case 20:
+    console.log('Mon nombre vaut 20');
+    break;
+  case 25:
+    console.log('Mon nombre vaut 25');
+    break;
+  default:
+    console.log('Mon nombre vaut une valeur inconnue');
+}</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>La boucle for</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 490px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>exécute une boucle à partir de l'index i tant que i est inférieur à 5. A la fin de chaque boucle, i s'incrémente de 1.&nbsp;</li>
+                                    <li>si la condition est fausse, la boucle s'arrête.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 610px; height: 300px; left: 175px; top: 140px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>// fichier index.js
+for (let i = 0; i &lt; 5; i++) { // i++ signifie i + 1
+    console.log(i);
+}</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>La boucle while</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 490px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>exécute une boucle tant que la condition est vraie</li>
+                                    <li>si la condition est fausse, la boucle s'arrête.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 610px; height: 300px; left: 175px; top: 140px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>// fichier index.js
+let i = Math.random();
+while (i &gt; 0.05) {
+    console.log(i);
+    i = Math.random();
+}</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>La boucle do..while</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 490px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li>exécute une boucle tant que la condition est vraie
+                                        <strong>mais exécute toujours la boucle une fois</strong>
+                                    </li>
+                                    <li>si la condition est fausse, la boucle s'arrête.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 610px; height: 300px; left: 175px; top: 140px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>// fichier index.js
+let i;
+do {
+    i = Math.random();
+    console.log(i);
+} while (i &gt; 0.05)</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 631px; left: 165px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1>Exerçons-nous un peu</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Pokémon</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 96px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                                <ul>
+                                    <li>
+                                        <span style="font-size:0.9em">Notre dresseur possède une équipe de 4 pokemons :</span>
+                                        <ul>
+                                            <li>
+                                            <span style="font-size:0.9em">Pikachu et
+                                                <span style="color:rgb(17, 17, 17); text-align:left">Ramoloss</span>&nbsp;qui évoluent
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:0.9em">Negapi et Posipi qui n'évoluent pas</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span style="font-size:0.9em">Chaque jour, un événement survient :</span>
+                                        <ul>
+                                            <li>
+                                                <span style="font-size:0.9em">Jour 1 : Negapi n'est pas content. Il décide de s’exprimer dans la console en nous disant : "Negapi ! Negapi !"</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:0.9em">Jour 2 : Pikachu évolue en Raïchu.</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:0.9em">Jour 3 : Posipi et Negapi s'affronte. Ils </span>
+                                                <span style="font-size:27px">reçoivent</span>
+                                                <span style="font-size:0.9em">&nbsp;des </span>
+                                                <span style="font-size:27px">dégâts</span>
+                                                <span style="font-size:0.9em">&nbsp;aléatoires. Le gagnant s'exprime dans la console.</span>
+                                            </li>
+                                            <li>
+                                                <span style="font-size:0.9em">Jour 4 : Ramoloss baille et se sent fatigué. Le dresseur décide de l'afficher dans la page Web : "Ramoloss est fatigué".</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span style="font-size:0.9em">A la fin des 4 jours, le dresseur décide de lister tous ses pokemons dans la console en une seule fois</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 822px; left: 69px; top: 166px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>
+                                    <span style="font-size:1.2em">Comment feriez-vous ?</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 354px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;" dir="ui">
+                                <ul>
+                                    <li>Instructions supplémentaires :&nbsp;
+
+                                        <ul>
+                                            <li>Pour chaque affichage dans la console, préciser le jour.</li>
+                                            <li>Utiliser au maximum les pokemons.</li>
+                                            <li>Utiliser la bonne solution au bon moment</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 822px; left: 70px; top: 0px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10; line-height: 0.91;" data-has-line-height="">
+                                <h2>
+                                    <span style="font-size:0.7em">Exemple d'implémentation</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 845px; height: 630px; left: 59px; top: 62px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>let pokemon1 = 'Pikachu';
+let pokemon2 = 'Ramoloss';
+const pokemon3 = 'Negapi';
+const pokemon4 = 'Posipi';
+
+for (let day = 1; day &lt; 5; day++) {
+    switch (day) {
+        case 1:
+            console.log(`Jour ${day} : ${pokemon3} ! ${pokemon3} !`);
+            break;
+        case 2:
+            console.log(`Jour ${day} : ${pokemon1} évolue en Raichu.`);
+            pokemon1 = 'Raichu';
+            break;
+        case 3:
+            let day3Print = `Jour ${day} : `;
+            const pokemon3Damage = Math.random();
+            const pokemon4Damage = Math.random();
+            if (pokemon3Damage &gt; pokemon4Damage) {
+            	console.log(day3Print + `${pokemon3} remporte le combat.`);
+            } else {
+              console.log(day3Print + `${pokemon4} remporte le combat`);
+            }
+            break;
+        case 4:
+            console.log(`Jour ${day} : ${pokemon2} est fatigué.`);
+            document.write(`Jour ${day} : ${pokemon2} est fatigué.`);
+            break;
+    }
+}
+
+console.log(`Le dresseur possède ${pokemon1}, ${pokemon2}, ${pokemon3}, ${pokemon4}.`);</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1 style="color:rgb(17, 17, 17)">Les fondamentaux de JavaScript 3/3</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2 style="color:rgb(17, 17, 17)">Les fonctions</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 186px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17)">« sous-programme » qui peut être appelé par du code extérieur à la fonction</li>
+                                    <li style="color:rgb(17, 17, 17)">composée d'une suite d'instructions qui forment le corps de la fonction</li>
+                                    <li style="color:rgb(17, 17, 17)">passer des valeurs à une fonction et une fonction peut éventuellement retourner (ou renvoyer) une valeur</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 170px; left: 230px; top: 475px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre><code>function square(number) {
+    return number * number;
+}
+
+const number = 4;
+
+console.log(square(number)); // La console affiche 16</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: -4px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;" dir="ui">
+                                <h2 style="color:rgb(17, 17, 17)">
+                                    <span style="font-size:0.9em">Les objets</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17)">
+                                        <span style="color:rgb(51, 51, 51); text-align:start">ensemble de propriétés</span>
+                                    </li>
+                                    <li style="color:rgb(17, 17, 17)">
+                                        <span style="color:rgb(51, 51, 51); text-align:start">une propriété est une association entre un nom (aussi appelé </span>
+                                        <em>clé</em>
+                                        <span style="color:rgb(51, 51, 51); text-align:start">) et une valeur</span>
+                                    </li>
+                                    <li style="color:rgb(17, 17, 17)">La valeur d'une propriété peut être une fonction, auquel cas la propriété peut être appelée « méthode »</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 570px; height: 210px; left: 195px; top: 272px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre><code>const me = {
+    firstname: 'Flavien',
+    lastname: 'Moutawe',
+    age: 25,
+    city: 'Lyon'
+}
+
+me['job in life'] = 'Développeur Web';
+
+console.log(me);    // La console affiche l'objet complet</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 688px; height: 198px; left: 133px; top: 496px;">
+                            <div class="sl-block-content notranslate" style="z-index: 14;">
+                            <pre><code>const mathFunctions = {
+    square: function (number) {
+        return number * number;
+    },
+    addition: function (a, b) {
+        return a + b;
+    }
+}
+console.log(mathFunctions.square(4));       // La console affiche 16
+console.log(mathFunctions.addition(2, 3));  // La console affiche 5</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Les objets</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul style="color:rgb(17, 17, 17)">
+                                    <li>
+                                        <span style="color:rgb(17, 17, 17); text-align:left">la valeur d'une propriété peut être :</span>
+                                        <ul>
+                                            <li>un type primitif,</li>
+                                            <li>une fonction,</li>
+                                            <li>un objet,</li>
+                                            <li>un tableau</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 300px; left: 83px; top: 377px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre class="javascript">
+                                <code>const myObject = {
+    user: {
+        firstname: 'Foo',
+        lastname: 'Bor'
+    },
+    property: 32,
+    hello: function (name) {
+        return `Hello ${name} !`;
+    }
+}
+
+console.log(myObject.user.firstname);        // La console affiche "Foo"
+console.log(myObject.property);              // La console affiche "32"
+console.log(myObject.hello('Victor'));       // La console affiche "Hello Victor !"</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les tableaux</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 797px; left: 86px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul style="color:rgb(17, 17, 17)">
+                                    <li style="color:rgb(17, 17, 17)">Array en anglais</li>
+                                    <li style="color:rgb(17, 17, 17)">Ensemble de propriétés ordonné numériquement à partir de 0</li>
+                                    <li style="color:rgb(17, 17, 17)">de la même façon que les objets, les propriétés peuvent être un type primitif, un objet, un tableau ou une fonction</li>
+                                    <li style="color:rgb(17, 17, 17)">les tableaux possède des fonctions afin de faciliter les traitements sur les propriétés</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 800px; height: 150px; left: 80px; top: 490px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>
+const pokemons = ['Salamèche', 'Pikachu', 'Raichu', 'Negapi', 'Posipi'];
+console.log(pokemons[0]);   // La console affiche "Salamèche"
+
+pokemons.shift();           // Supprime le premier élément
+console.log(pokemons[0]);   // La console affiche "Pikachu"</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les tableaux</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 797px; left: 86px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul style="color:rgb(17, 17, 17)">
+                                    <li style="color:rgb(17, 17, 17)">
+                                        <span style="color:rgb(17, 17, 17); text-align:left">la valeur d'une propriété peut être :</span>
+                                        <ul>
+                                            <li>un type primitif,</li>
+                                            <li>une fonction,</li>
+                                            <li>un objet,</li>
+                                            <li>un tableau</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 800px; height: 285px; left: 80px; top: 384px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>const myArray = [
+    42,
+    'Foo',
+    {
+        name: 'Bar',
+        number: '06 XX XX XX XX'
+    },
+    function () {
+        return 'Bar';
+    }
+];
+
+console.log(myArray);   // La console affiche le tableau complet</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Les tableaux</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 797px; left: 82px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul style="color:rgb(17, 17, 17)">
+                                    <li style="color:rgb(17, 17, 17)">le tableau possède un très grand nombre de fonctions utilises comme :&nbsp;
+
+                                        <ul>
+                                            <li>push : ajouter un élément dans le tableau</li>
+                                            <li>forEach : parcourir l'intégralité du tableau</li>
+                                            <li>filter : filter le tableau à partir d'une fonction</li>
+                                        </ul>
+                                    </li>
+                                    <li style="color:rgb(17, 17, 17)">le tableau possède la propriété length qui indique le nombre délément présent dans le tableau</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 824px; height: 246px; left: 68px; top: 454px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>const firstNames = ['Martin', 'Jacques', 'Camille', 'Marie', 'Madeleine'];
+
+console.log(firstNames.length);   // La console affiche 5
+
+firstNames.push('Henri');
+
+console.log(firstNames.length);   // La console affiche 6
+
+firstNames.forEach(function (item) {
+    console.log(item)    // La console affiche tous les éléments présents dans le tableau
+});</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2>Boucler sur un tableau</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 797px; left: 83px; top: 116px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul style="color:rgb(17, 17, 17)">
+                                    <li style="color:rgb(17, 17, 17)">
+                                        <span style="color:rgb(17, 17, 17); text-align:left">Il existe plusieurs méthodes pour faire une boucle sur un tableau : </span>
+                                    </li>
+                                    <li>for : utile pour parcourir une partie du tableau</li>
+                                    <li>for .. of : considéré comme le plus rapide</li>
+                                    <li>monTableau.forEach :
+
+                                        <ul>
+                                            <li>permet de récupérer l'élément et l'index</li>
+                                            <li>ne peut pas être arrêter par un return</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 824px; height: 263px; left: 70px; top: 420px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>const firstNames = ['Martin', 'Jacques', 'Camille', 'Marie', 'Madeleine'];
+
+for (let item of firstNames) {
+    console.log(item)    // La console affiche chaque élément durant la boucle
+}
+
+firstNames.forEach(function (item, index) {
+    console.log(item)    // La console affiche chaque élément durant la boucle
+});
+
+for (let i = 0; i &lt; firstNames.length; i++) {
+    console.log(firstNames[i])    // La console affiche chaque élément durant la boucle
+}</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 248px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1 style="color:rgb(17, 17, 17)">Exerçons nous</h1>
+                                <h1 style="color:rgb(17, 17, 17)">un peu</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2 style="color:rgb(17, 17, 17)">Conversions</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 854px; left: 53px; top: 155px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17); text-align:justify">Utiliser JavaScript pour afficher dans la console la valeur en euros de 2001 francs.</li>
+                                    <li style="color:rgb(17, 17, 17); text-align:justify">Définir une fonction JavaScript qui pour une valeur donnée en francs fournit la valeur en euros.</li>
+                                    <li style="color:rgb(17, 17, 17); text-align:justify">Utiliser cette fonction pour convertir [0,1000] francs en euros avec un pas de 50, et présenter le résultat dans un tableau.</li>
+                                    <li style="color:rgb(17, 17, 17); text-align:justify">Convertir [0,1000] euros en francs en intégrant les résultats dans un tableau. Présenter les résultats multiples de 50 et inférieur à 500€ dans un tableau.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2 style="color:rgb(17, 17, 17)">Conversions</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 650px; height: 560px; left: 155px; top: 140px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>const francToEuroRate = 6.55957;
+const step = 50;
+
+console.log(2001 / francToEuroRate);
+
+function francToEuro(amount) {
+    return amount / francToEuroRate;
+}
+
+const euros = [];
+for (var i = 0; i &lt;= 1000; i += step) {
+    euros.push(francToEuro(i));
+}
+console.log(euros);
+
+function euroToFranc(amount) {
+    return amount * francToEuroRate;
+}
+
+const francs = [];
+for (var i = 0; i &lt;= 1000; i += step) {
+    francs.push(euroToFranc(i));
+}
+
+const amounts1To200euros = francs.filter(function (item, index) {
+    return (index * step) &lt;= 200;
+});
+console.log(amounts1To200euros);</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1 style="color:rgb(17, 17, 17)">Manipuler un document HTML</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2 style="color:rgb(17, 17, 17)">NodeElement</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 210px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17)">NodeElement est un objet dont chaque attribut du tag est une propriété</li>
+                                    <li style="color:rgb(17, 17, 17)">NodeElement possède des propriétés ou des fonctions permettant de manipuler la page comme :&nbsp;
+
+                                        <ul>
+                                            <li>ajouter une class</li>
+                                            <li>modifier le contenu de cet élément</li>
+                                            <li>modifier le texte de l'élément</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2 style="color:rgb(17, 17, 17)">La variable document</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 880px; left: 40px; top: 139px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17)">la variable document est un
+                                        <strong>objet</strong>
+                                    </li>
+                                    <li style="color:rgb(17, 17, 17)">point d'entrée dans le contenu de la page Web, qui est l'arborescence DOM</li>
+                                    <li style="color:rgb(17, 17, 17)">Les&nbsp; propriétés et méthodes les plus utiles :&nbsp;
+
+                                        <ul>
+                                            <li>document.location : permet de récupérer l'url courante</li>
+                                            <li>document.getElementById :
+                                                <br/>
+                                                retourne une référence d'objet à l'élément identifié.
+                                            </li>
+                                            <li>document.querySelector : Renvoie le premier noeud Element dans le document, dans l'ordre du document, qui correspond aux sélecteurs spécifiés.</li>
+                                            <li>document.querySelectorAll :
+                                                <br/>
+                                                retourne une liste de tous les noeuds éléments inclus dans le document qui correspondent aux sélecteurs spécifiés
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2 style="color:rgb(17, 17, 17)">Exemple d'utilisation</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 134px; left: 230px; top: 146px;">
+                            <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <pre class="javascript">
+                                <code>&lt;html&gt;
+&lt;body&gt;
+    &lt;h1 id="myTitle"&gt;Mon titre&lt;/h1&gt;
+    &lt;p class="paragraph"&gt;Mon paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;">
+                            <div class="sl-block-content" style="z-index: 13;">
+                                <h3 style="color:rgb(17, 17, 17)">Essayons dans la console</h3>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 880px; height: 171px; left: 40px; top: 420px;">
+                            <div class="sl-block-content notranslate" style="z-index: 14;">
+                            <pre class="javascript">
+                                <code>document
+    .querySelector('.paragraph');     // Retourne le premier tag portant la class "paragraph"
+document
+    .querySelectorAll('.paragraph');  // Retourne tous les tags portant la class "paragraph"
+
+document.getElementById('myTitle');       // Retourne le tag portant l'id "myTitle"
+document.querySelector('#myTitle');       // Retourne le tag portant l'id "myTitle"</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2 style="color:rgb(17, 17, 17)">Manipuler les éléments</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17)">Nous savons maintenant récupérer les éléments HTML depuis le DOM.</li>
+                                    <li style="color:rgb(17, 17, 17)">Nous pouvons les modifier en utilisant les propriétés de l'élément</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 646px; left: 160px; top: 395px;">
+                            <div class="sl-block-content" style="z-index: 13; color: rgb(0, 0, 0);">
+                                <h3 style="">Exemple avec la propriété "style"</h3>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 570px; height: 81px; left: 198px; top: 479px;">
+                            <div class="sl-block-content notranslate" style="z-index: 14;">
+                            <pre><code>const paragraph = document.querySelector('.paragraph');
+
+paragraph.style.color = 'red';</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 33px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h2 style="color:rgb(17, 17, 17)">Les evènements</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; width: 806px; left: 77px; top: 140px;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <ul>
+                                    <li style="color:rgb(17, 17, 17)">
+                                        <span style="color:rgba(0, 0, 0, 0.85); text-align:start">permettent de déclencher une fonction selon qu'une action s'est produite ou non</span>
+                                    </li>
+                                    <li style="color:rgb(17, 17, 17)">
+                                        <span style="color:rgba(0, 0, 0, 0.85); text-align:start">Les évènements sont affectés à un élément HTML grâce à la methode </span>
+                                        <strong>addEventListener</strong>
+                                    </li>
+                                    <li style="color:rgb(17, 17, 17)">exemple : réagir au clic sur un bouton</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 570px; height: 110px; left: 195px; top: 380px;">
+                            <div class="sl-block-content notranslate" style="z-index: 13;">
+                            <pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;button id="myButton"&gt;Mon bouton&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="code" style="width: 570px; height: 118px; left: 195px; top: 512px;">
+                            <div class="sl-block-content notranslate" style="z-index: 14;">
+                            <pre><code>const myButton = document.querySelector('#myButton');
+
+myButton.addEventListener('click', function () {
+    console.log("j'ai cliqué sur mon bouton");
+});</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="stack">
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1 style="color:rgb(17, 17, 17)">Exerçons-nous</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 253px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 10;">
+                                <h1 style="color:rgb(17, 17, 17)">Créons une calculatrice</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Le design</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="width: 560px; left: 0px; top: 214px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 12;">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="0">Un espace de résultat</li>
+                                    <li class="fragment" data-fragment-index="1">10 chiffres et le symbole "point"</li>
+                                    <li class="fragment" data-fragment-index="2">4 opérateurs de calcul</li>
+                                    <li class="fragment" data-fragment-index="3">Le symbole "égal"</li>
+                                    <li class="fragment" data-fragment-index="4">Le symbole "retour"</li>
+                                    <li class="fragment" data-fragment-index="5">Le symbole "clear" (C)</li>
+                                    <li class="fragment" data-fragment-index="6">Le symbole "clear entry" (CE)&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 329px; height: 400px; left: 612px; top: 111px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="7">
+                                <img style="" data-natural-width="329" data-natural-height="400" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/315256/images/4892906/pasted-from-clipboard.png"/>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 552px; left: 8px; top: 511px;">
+                            <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="8">
+                                <p>
+                                <span style="color:#FF8C00">
+                                    <span style="text-align:start">Disponible à l'adresse suivante:
+                                        <a href="https://goo.gl/QkByVS" target="_blank">https://goo.gl/QkByVS</a>
+                                    </span>
+                                </span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 0px; height: auto;">
+                            <div class="sl-block-content" style="z-index: 11;">
+                                <h2>Ajoutons la mécanique de calcul ensemble</h2>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 815px; left: 65px; top: 583px;">
+                            <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="1">
+                                <p>Exemple d'implémentation à cette adresse :
+                                    <a href="https://github.com/js-learning/calculator/tree/simple-calculator" target="_blank">&nbsp;
+                                        <br/>
+                                        https://github.com/js-learning/calculator
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 287px;">
+                            <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="0">
+                                <ul>
+                                    <li>Des variables</li>
+                                    <li>Des fonctions</li>
+                                    <li class="visible">Des boucles</li>
+                                    <li>Des opérations sur le DOM</li>
+                                    <li>Des événements</li>
+                                    <li>Des opérations de calcul</li>
+                                    <li>Des tableaux</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 210px;">
+                            <div class="sl-block-content" style="z-index: 14;">
+                                <p>
+                                    <span style="color:rgb(17, 17, 17)">Qu'allons nous utilisez </span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                width: 960,
+                height: 700,
+                transition: "slide",
+                backgroundTransition: "slide",
+                center: false,
+                slideNumber: true,
+                history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
